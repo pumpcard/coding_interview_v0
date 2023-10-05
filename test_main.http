@@ -1,0 +1,11 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:8000/get-instances
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/get-ranked-instances?instance_date=2023-10-04
+Accept: application/json
+
+###
