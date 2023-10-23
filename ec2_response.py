@@ -2,11 +2,11 @@ from recurring_charge import RecurringCharge
 
 class InstanceOfferingResponse():
 
+    reserved_instance_offering_id: str
     duration: float
     fixed_price: float
     instance_type: str
     product_description: str
-    reserved_instance_offering_id: str
     usage_price: float
     currency_code: str
     instance_tenancy: str
@@ -18,11 +18,11 @@ class InstanceOfferingResponse():
     scope: str
 
     def __init__(self, instance_response_dict) -> None:
+        self.reserved_instance_offering_id = instance_response_dict['ReservedInstancesOfferingId']
+        self.instance_type = instance_response_dict['InstanceType']
         self.duration = instance_response_dict['Duration']
         self.fixed_price = instance_response_dict['FixedPrice']
-        self.instance_type = instance_response_dict['InstanceType']
         self.product_description = instance_response_dict['ProductDescription']
-        self.reserved_instance_offering_id = instance_response_dict['ReservedInstancesOfferingId']
         self.usage_price = instance_response_dict['UsagePrice']
         self.currency_code = instance_response_dict['CurrencyCode']
         self.instance_tenancy = instance_response_dict['InstanceTenancy']
